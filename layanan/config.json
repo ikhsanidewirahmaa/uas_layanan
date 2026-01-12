@@ -1,0 +1,168 @@
+{
+  "name": "Layanan Kerusakan Fasilitas",
+  "version": "1.0.0",
+  "description": "Website untuk manajemen laporan dan perbaikan kerusakan fasilitas",
+  "author": "Developer",
+  "license": "MIT",
+  "keywords": [
+    "layanan",
+    "kerusakan",
+    "fasilitas",
+    "perbaikan",
+    "maintenance"
+  ],
+  "project": {
+    "type": "PHP Web Application",
+    "framework": "Vanilla PHP",
+    "database": "MySQL",
+    "server": "Apache"
+  },
+  "requirements": {
+    "php": "7.4+",
+    "mysql": "5.7+",
+    "apache": "2.4+"
+  },
+  "urls": {
+    "home": "http://localhost/layanan/",
+    "laporan": "http://localhost/layanan/laporan.php",
+    "admin": "http://localhost/layanan/admin.php",
+    "database": "http://localhost/phpmyadmin/"
+  },
+  "database": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "name": "layanan_kerusakan"
+  },
+  "features": {
+    "frontend": [
+      "Responsive Design",
+      "Modern UI/UX",
+      "Mobile Friendly",
+      "Dark Mode Ready"
+    ],
+    "backend": [
+      "Database Integration",
+      "Form Validation",
+      "Error Handling",
+      "SQL Injection Prevention"
+    ],
+    "database": [
+      "Laporan Kerusakan",
+      "Manajemen Teknisi",
+      "Penugasan Teknisi",
+      "Kategori Kerusakan",
+      "Riwayat Aktivitas"
+    ]
+  },
+  "pages": {
+    "index.php": {
+      "title": "Halaman Utama",
+      "description": "Landing page dengan overview layanan",
+      "sections": [
+        "Navigation",
+        "Hero Section",
+        "Layanan",
+        "Tentang",
+        "Kontak",
+        "Footer"
+      ]
+    },
+    "laporan.php": {
+      "title": "Form Laporan Kerusakan",
+      "description": "Form untuk melapor kerusakan fasilitas",
+      "fields": [
+        "nama",
+        "email",
+        "telepon",
+        "lokasi",
+        "jenis_kerusakan",
+        "deskripsi",
+        "prioritas"
+      ]
+    },
+    "admin.php": {
+      "title": "Dashboard Admin",
+      "description": "Panel administrasi untuk mengelola laporan",
+      "features": [
+        "Dashboard Statistik",
+        "Tabel Laporan",
+        "Filter & Search",
+        "Modal Detail",
+        "Update Status"
+      ]
+    },
+    "koneksi.php": {
+      "title": "Database Connection",
+      "description": "File koneksi database MySQL"
+    }
+  },
+  "database_tables": {
+    "laporan_kerusakan": {
+      "id_laporan": "INT AUTO_INCREMENT PRIMARY KEY",
+      "nama": "VARCHAR(100)",
+      "email": "VARCHAR(100)",
+      "telepon": "VARCHAR(20)",
+      "lokasi": "VARCHAR(255)",
+      "jenis_kerusakan": "VARCHAR(100)",
+      "deskripsi": "LONGTEXT",
+      "prioritas": "ENUM(Rendah, Sedang, Tinggi, Darurat)",
+      "tanggal_lapor": "DATETIME",
+      "status": "ENUM(Pending, Diproses, Selesai, Batal)",
+      "catatan_teknis": "LONGTEXT"
+    },
+    "teknisi": {
+      "id_teknisi": "INT AUTO_INCREMENT PRIMARY KEY",
+      "nama": "VARCHAR(100)",
+      "spesialisasi": "VARCHAR(100)",
+      "nomor_telepon": "VARCHAR(20)",
+      "email": "VARCHAR(100)",
+      "status": "ENUM(Aktif, Nonaktif)"
+    },
+    "kategori_kerusakan": {
+      "id_kategori": "INT AUTO_INCREMENT PRIMARY KEY",
+      "nama_kategori": "VARCHAR(100) UNIQUE",
+      "deskripsi": "LONGTEXT",
+      "icon": "VARCHAR(50)",
+      "status": "ENUM(Aktif, Nonaktif)"
+    }
+  },
+  "color_scheme": {
+    "primary": "#1e3a5f",
+    "secondary": "#ff6b35",
+    "accent": "#f7931e",
+    "light_bg": "#f5f5f5",
+    "success": "#27ae60",
+    "error": "#e74c3c",
+    "warning": "#f39c12"
+  },
+  "scripts": {
+    "javascript": {
+      "file": "assets/js/script.js",
+      "features": [
+        "Mobile Menu Toggle",
+        "Smooth Scrolling",
+        "Form Validation",
+        "Intersection Observer Animation",
+        "Search & Filter"
+      ]
+    }
+  },
+  "maintenance_tips": {
+    "daily": [
+      "Monitor laporan masuk di admin panel",
+      "Update status laporan yang diproses",
+      "Respond cepat untuk laporan prioritas tinggi"
+    ],
+    "weekly": [
+      "Review laporan selesai",
+      "Update daftar teknisi",
+      "Backup database"
+    ],
+    "monthly": [
+      "Analisis laporan kerusakan terbanyak",
+      "Review kepuasan pelanggan",
+      "Planning maintenance preventif"
+    ]
+  }
+}
